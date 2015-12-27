@@ -24,7 +24,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="flask-secure-cookie",
-    version="0.1.1",
+    version="0.1.2",
     description="Tornado's secure cookie support in Flask",
     author="Eran Sandler",
     author_email="eran@sandler.co.il",

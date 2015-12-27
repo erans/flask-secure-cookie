@@ -300,6 +300,6 @@ class SecureCookie(object):
         if expires_days and expires is None:
             max_age = expires_days * 86400
 
-        response.set_cookie(name, cookie_value, max_age=max_age, expirs=expires)
+        response.set_cookie(name, cookie_value, max_age=max_age, expires=expires)
 
 __all__ = ["SecureCookie"]
