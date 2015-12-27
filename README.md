@@ -23,7 +23,10 @@ app = Flask(__name__)
 #
 secure_cookie = SecureCookie(app)
 
-secure_cookie.set("mycookie", "Hello World")
+redirect_to_protected = redirect("/protected")
+response = app.make_response(redirect_to_protected)
+
+secure_cookie.set("mycookie", "Hello World", response)
 cookie_value = secure_cookie.get("mycookie")
 ```
 
