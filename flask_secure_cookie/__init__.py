@@ -116,7 +116,7 @@ class SecureCookie(object):
         return version
 
     def _create_signature_v1(self, secret, *parts):
-        hash = hmac.new(self.utf8(secret), digestmod=hashlib.sha1)
+        hash = hmac.new(utf8(secret), digestmod=hashlib.sha1)
         for part in parts:
             hash.update(utf8(part))
         return utf8(hash.hexdigest())
